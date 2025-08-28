@@ -20,24 +20,39 @@ def dividir (num1, num2):
 
 
 if __name__ == "__main__":
-    print("Calculadora")
 
 
-entrada_numero1 = input("Digite o primeiro numero: ")
-entrada_numero2 = input("Digite o segundo numero: ")
+    while True:
 
-try:
-    num1_int = int(entrada_numero1)
-    num2_int = int(entrada_numero2)
+        print("\n---Calculadora---")
+        print("Digite 'sair' a qualquer momento para encerrar o programa")
 
-    soma = somar(num1_int, num2_int)
-    multiplicacao = multiplicar(num1_int, num2_int)
-    subtracao = subtrair(num1_int, num2_int)
-    divisao = dividir(num1_int, num2_int)
+        entrada_numero1 = input("Digite o primeiro numero: ")
 
-    print(f"A somar é {soma}")
-    print(f"A multiplicacao é {multiplicacao}")
-    print(f"A subtracao é {subtracao}")
-    print(f"A divisao é {divisao}")
-except:
-    print("Erro: Por favor, digite apenas números inteiro")
+        if entrada_numero1.lower() == "sair":
+            break
+
+        entrada_numero2 = input("Digite o segundo numero: ")
+
+        if entrada_numero2.lower() == "sair":
+            break
+
+        try:
+            num1_int = int(entrada_numero1)
+            num2_int = int(entrada_numero2)
+
+            soma = somar(num1_int, num2_int)
+            multiplicacao = multiplicar(num1_int, num2_int)
+            subtracao = subtrair(num1_int, num2_int)
+            divisao = dividir(num1_int, num2_int)
+
+            print(f"A somar é {soma}")
+            print(f"A multiplicacao é {multiplicacao}")
+            print(f"A subtracao é {subtracao}")
+            print(f"A divisao é {divisao}")
+
+        except ValueError:
+            print("Erro: Por favor, digite apenas números inteiro")
+            continue
+
+print("Obrigado até a próxima")
