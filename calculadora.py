@@ -50,10 +50,11 @@ if __name__ == "__main__":
             divisao = dividir(num1_int, num2_int)
             potenciacao = potencia(num1_int, num2_int)
 
-            print(f"A somar é {soma}")
-            print(f"A multiplicacao é {multiplicacao}")
-            print(f"A subtracao é {subtracao}")
-            print(f"A divisao é {divisao}")
+            print(f"\n---RESULTADOS---")
+            print(f"Somar: {soma}")
+            print(f"Multiplicacao: {multiplicacao}")
+            print(f"Subtracao: {subtracao}")
+            print(f"Divisao: {divisao}")
             print(f"Potência: {potenciacao}")
 
         except ValueError:
