@@ -18,6 +18,9 @@ def dividir (num1, num2):
         resultado_divisao = num1 / num2
         return resultado_divisao
 
+def potencia(base, expoente):
+        return base ** expoente
+
 
 if __name__ == "__main__":
 
@@ -45,11 +48,13 @@ if __name__ == "__main__":
             multiplicacao = multiplicar(num1_int, num2_int)
             subtracao = subtrair(num1_int, num2_int)
             divisao = dividir(num1_int, num2_int)
+            potenciacao = potencia(num1_int, num2_int)
 
             print(f"A somar é {soma}")
             print(f"A multiplicacao é {multiplicacao}")
             print(f"A subtracao é {subtracao}")
             print(f"A divisao é {divisao}")
+            print(f"Potência: {potenciacao}")
 
         except ValueError:
             print("Erro: Por favor, digite apenas números inteiro")
